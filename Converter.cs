@@ -45,7 +45,7 @@ namespace koryagin1
 				//Основная часть
 				if (!Dictionaries.AllWords.ContainsKey(words[i])) throw new ArgumentException("Неудалось определить слово: " + words[i]);
 
-				if (i + 1 < words.Count && words[i + 1] == "cent")
+				if (i + 1 < words.Count && words[i + 1] == "cent" && Dictionaries.Digits.ContainsKey(words[i]))
 					number.TryAddValue(Dictionaries.AllWords[words[i]] * 100);
 				else
 					number.TryAddValue(Dictionaries.AllWords[words[i]]);

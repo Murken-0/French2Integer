@@ -21,11 +21,9 @@ namespace koryagin1
 			WasHundreds = false;
 		}
 
-		//TODOOOOOO
 		public void TryAddValue(int value)
 		{
-			var rank = GetRankByValue(value);
-			switch (rank)
+			switch (GetRankByValue(value))
 			{
 				case NumberRank.Digit:
 					if (WasDigits)
@@ -33,12 +31,16 @@ namespace koryagin1
 					WasDigits = true;
 					break;
 				case NumberRank.Ten:
+					if (WasTens)
+						if (value / 10 == 1 && (Value % 100 / 10 == 6 || Value % 100 / 10 == 8))
+						{
+							if (value % 10 != 0) WasDigits = true;
+						}
+						else
+							throw new ArgumentException("Разряд десяков введен несколько раз");
 					if (WasDigits)
 						throw new ArgumentException("Разряд десятков должен указываться перед единицами");
-					if (value / 10 == 1 && (Value / 10 == 6 || Value / 10 == 8))
-						break;
-					if (WasTens)
-						throw new ArgumentException("Разряд десяков введен несколько раз");
+					WasTens = true;
 					break;
 				case NumberRank.Houndred:
 					if (WasHundreds)
@@ -48,14 +50,13 @@ namespace koryagin1
 					WasHundreds = true;
 					break;
 				default:
-					throw new InvalidOperationException();
+					throw new InvalidOperationException("Как это вообще появилось?)))");
 			}
 			Value += value;
 		}
 		private NumberRank GetRankByValue(int value)
 		{
-			if (value == 0) return NumberRank.Digit;
-			else if (value / 10 == 0 && value % 10 != 0) return NumberRank.Digit;
+			if (value / 10 == 0) return NumberRank.Digit;
 			else if (value / 100 == 0 && value % 100 != 0) return NumberRank.Ten;
 			else return NumberRank.Houndred;
 		}
