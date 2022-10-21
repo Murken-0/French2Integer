@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
+using System.Drawing;
 
 namespace koryagin1
 {
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
 		Converter converter = new Converter();
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 		}
@@ -18,10 +17,12 @@ namespace koryagin1
 			try
 			{
 				outputLabel.Text = "Ваше число: " + converter.Convert(inputBox.Text);
+				outputLabel.ForeColor = Color.Black;
 			}
 			catch (ArgumentException exc)
 			{
 				outputLabel.Text = exc.Message;
+				outputLabel.ForeColor = Color.Red;
 			}
 		}
 
