@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace koryagin1.Properties
+namespace French2Integer.Properties
 {
 
 

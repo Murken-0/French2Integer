@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace koryagin1
+namespace French2Integer
 {
     public partial class MainForm : Form
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace koryagin1
+namespace French2Integer
 {
     internal static class Dictionaries
     {

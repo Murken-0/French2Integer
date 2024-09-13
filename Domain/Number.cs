@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace koryagin1
+namespace French2Integer
+
 {
     internal class Number
     {

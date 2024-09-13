@@ -1,4 +1,4 @@
-﻿namespace koryagin1
+﻿namespace French2Integer
 {
     public enum NumberRank
     {
