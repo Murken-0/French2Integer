@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "koryagin1", "koryagin1.csproj", "{33F9382D-C0ED-4B4F-87A2-90944BCE3DCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "French2Integer", "French2Integer.csproj", "{33F9382D-C0ED-4B4F-87A2-90944BCE3DCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
